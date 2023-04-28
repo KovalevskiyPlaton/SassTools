@@ -1,0 +1,4 @@
+
+npm i sass --save-dev gulp  //install sas_v4
+
+gulp //active gulp compiler

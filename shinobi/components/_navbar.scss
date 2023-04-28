@@ -1,0 +1,33 @@
+/*<!--UsedSource: https://www.youtube.com/@NetNinja-->*/
+/*%-означает, что в основной файл index.css не будет комплироватся (там мы его не увидим)*/
+%flex-layout{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.navbar{
+   @extend  %flex-layout;
+   padding: $base-padding $base-padding*2;
+   box-shadow: $base-box-shadow;
+
+  .site-title{
+      font-size: $font-size-lg;
+  }
+  .container{
+    @extend %flex-layout
+  }
+}
+
+//create colorsNavbarPanel class
+
+
+@each $key, $val in $colors{
+    .navbar-#{$key}{
+        @extend .navbar;
+      background-color: $val;
+    }
+}
+
